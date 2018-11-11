@@ -10,7 +10,7 @@ export default class HomeScreen extends React.Component{
   
   constructor(props){
     super(props)
-    this.state = { loading : true, products: mockData.items}
+    this.state = { loading : true, products: mockData}
   }
 
   static navigationOptions = {
@@ -64,7 +64,17 @@ export default class HomeScreen extends React.Component{
                 <Grid>
                     <Col style={{ flex:1}}>
                       <FlatList
-                        data={this.state.products}
+                        data={this.state.products.itemsOne}
+                        keyExtractor={(id,index) => index+""}
+                        renderItem={
+                            ( {item,key} ) => {
+                                return this._getItem(item,key)
+                            }
+                        }/>
+                    </Col>
+                    <Col style={{ flex:1}}>
+                      <FlatList
+                        data={this.state.products.itemsTwo}
                         keyExtractor={(id,index) => index+""}
                         renderItem={
                             ( {item,key} ) => {

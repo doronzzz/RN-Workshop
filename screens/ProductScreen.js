@@ -42,7 +42,7 @@ class ProductScreen extends React.Component{
             </CardItem>
             <CardItem>
               <Body>
-                <Button full onPress={() => this.props.addToCart(product)}>
+                <Button full onPress={ () => this.props.addToCart(product) }>
                    <Text>Add To Cart</Text>
                  </Button>
               </Body>

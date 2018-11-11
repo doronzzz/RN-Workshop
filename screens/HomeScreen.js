@@ -3,11 +3,6 @@ import { Image,View,FlatList,TouchableOpacity} from 'react-native';
 import { Container, Content, Card, CardItem, Thumbnail,Left,Body,Text} from 'native-base';
 import { Col, Grid } from "react-native-easy-grid";
 import { Font } from "expo";
-import Client from 'shopify-buy';
-const client = Client.buildClient({
-  storefrontAccessToken: 'af8f6edb3c0d3975b0720090d1d4085e',
-  domain: 'evexpress.myshopify.com'
-});
 import mockData from '../mockjson.json';
 console.log(mockData);
 
